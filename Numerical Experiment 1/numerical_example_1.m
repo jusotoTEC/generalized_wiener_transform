@@ -3,7 +3,7 @@
 % Reference: 
 %   Paper   = A multi-filtering transform of random vectors: theoretical and
 %             computational aspect. (Submitted paper - 2023)
-%   Authors = Soto-Quiros, P.
+%   Authors = Soto-Quiros, Pablo
 
 clc; clear
 warning ('off','all');
