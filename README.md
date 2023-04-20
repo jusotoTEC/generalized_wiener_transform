@@ -6,6 +6,7 @@
 * Anatoli Torokhti (https://people.unisa.edu.au/anatoli.torokhti) - Email: anatoli.torokhti@unisa.edu.au
 
 Pablo Soto-Quiros is an Associate Professor from the *Instituto Tecnológico de Costa Rica* (https://www.tec.ac.cr/) in Cartago, Costa Rica
+
 Anatoli Torokhti is an Associate Professor from the *Univeristy of South Australia* (https://www.unisa.edu.au/) in Mawson Lakes, SA, Australia
 
 ## Description
