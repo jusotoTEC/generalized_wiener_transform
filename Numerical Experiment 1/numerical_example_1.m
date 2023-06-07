@@ -1,9 +1,8 @@
 % Numerical Experiment 1
 
-% Reference: 
-%   Paper   = A multi-filtering transform of random vectors: theoretical and
-%             computational aspect. (Submitted paper - 2023)
-%   Authors = Soto-Quiros, Pablo
+% Reference:
+%   Paper   = Fast random vector transform within Wiener filtering paradigm. (Submitted paper - 2023)
+%   Authors = Soto-Quiros, Pablo and Torokhti, Anatoli
 
 clc; clear
 warning ('off','all');
@@ -21,7 +20,7 @@ Exy=zeros(m,m,p); Eyy=zeros(m,m,p);
 
 for i=1:p
     Exy(:,:,i)=(1/s)*(X(:,:,i)*(Y(:,:,i))');
-    Eyy(:,:,i)=(1/s)*(Y(:,:,i)*(Y(:,:,i))');    
+    Eyy(:,:,i)=(1/s)*(Y(:,:,i)*(Y(:,:,i))');
 end
 
 %%%% Step 3: Choose value of constant alpha %%%%

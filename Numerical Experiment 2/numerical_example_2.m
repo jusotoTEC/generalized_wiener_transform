@@ -1,9 +1,8 @@
 % Numerical Experiment 2
 
-% Reference: 
-%   Paper   = A multi-filtering transform of random vectors: theoretical and
-%             computational aspect. (Submitted paper - 2023)
-%   Authors = Soto-Quiros, Pablo
+% Reference:
+%   Paper   = Fast random vector transform within Wiener filtering paradigm. (Submitted paper - 2023)
+%   Authors = Soto-Quiros, Pablo and Torokhti, Anatoli
 
 clc; clear; close all
 
@@ -20,9 +19,9 @@ k=0;
 
 for m=dim
     k=k+1;
-    
+
     %%%% Step 2: Compute the covariance matrices %%%%
-    
+
     Exx=zeros(m,m,p);
     Exy=zeros(m,m,p);
     Eyy=zeros(m,m,p);
@@ -37,11 +36,11 @@ for m=dim
         Eyy(:,:,i)=A*Exixi*A'+Enini;
     end
     %%%% Step 3: Comuputing the multi-filtering transform using fast implementation and original formula %%%%
-    
-    tic; F1=mft(Exy,Eyy); timesM1(k)=toc;    
-    tic; F=mftNaive(Exy,Eyy); timesM2(k)=toc;    
+
+    tic; F1=mft(Exy,Eyy); timesM1(k)=toc;
+    tic; F=mftNaive(Exy,Eyy); timesM2(k)=toc;
     speedup(k)=timesM2(k)/timesM1(k);
-    percent_difference(k)=100*(timesM2(k)-timesM1(k))/timesM2(k);    
+    percent_difference(k)=100*(timesM2(k)-timesM1(k))/timesM2(k);
 end
 
 %%%% Step 4: Display the results obtained  %%%%

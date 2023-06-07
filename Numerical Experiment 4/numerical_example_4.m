@@ -1,9 +1,8 @@
-% Numerical Experiment 3
+% Numerical Experiment 4
 
-% Reference: 
-%   Paper   = A multi-filtering transform of random vectors: theoretical and
-%             computational aspect. (Submitted paper - 2023)
-%   Authors = Soto-Quiros, Pablo
+% Reference:
+%   Paper   = Fast random vector transform within Wiener filtering paradigm. (Submitted paper - 2023)
+%   Authors = Soto-Quiros, Pablo and Torokhti, Anatoli
 
 
 clc; clear; close all
@@ -51,7 +50,7 @@ end
 %%%% Step 3: Filtering noisy image using the multi-filtering transform %%%%
 
 sizeBlocks=32;
-blockRow=numRows/sizeBlocks; blockColums=numColumns/sizeBlocks; 
+blockRow=numRows/sizeBlocks; blockColums=numColumns/sizeBlocks;
 
 F=zeros(sizeBlocks^2,sizeBlocks^2,blockRow,blockColums);
 
@@ -68,7 +67,7 @@ for j=1:blockRow
                 Yaux=Y_total((j-1)*sizeBlocks+1:j*sizeBlocks,(k-1)*sizeBlocks+1:k*sizeBlocks,r,s);
                 X=[X Xaux(:)];
                 Y=[Y Yaux(:)];
-            end    
+            end
             Exy(:,:,r)=(1/q)*(X*Y');
             Eyy(:,:,r)=(1/q)*(Y*Y');
         end
@@ -108,14 +107,14 @@ disp('.')
 
 %%%% Step 4: Filtering noisy image using the IMP transform %%%%
 
-tic; 
+tic;
 s1=rank(Y_IMP);
 [~,~,V]=svd(Y_IMP);
 P=X_IMP*V(:,1:s1)*(V(:,1:s1))';
 [U1,S1,V1]=svd(P);
 r1=500;
 Pr1=U1(:,1:r1)*S1(1:r1,1:r1)*(V1(:,1:r1))';
-F=Pr1*pinv(Y_IMP); 
+F=Pr1*pinv(Y_IMP);
 
 t2=toc;
 Yaux=im2double(Ynoisy(:));
