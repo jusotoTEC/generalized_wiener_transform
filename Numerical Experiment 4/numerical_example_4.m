@@ -1,7 +1,7 @@
 % Numerical Experiment 4
 
 % Reference:
-%   Paper   = Fast random vector transform within Wiener filtering paradigm. (Submitted paper - 2023)
+%   Paper   = Fast transforms of random vectors within Wiener filtering paradigm. (Submitted paper - 2023)
 %   Authors = Soto-Quiros, Pablo and Torokhti, Anatoli
 
 
