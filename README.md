@@ -1,6 +1,6 @@
 # MATLAB Code from Numerical Experiments in Paper *"Fast transforms of random vectors within Wiener filtering paradigm"*
 
-## Author
+## Authors
 
 * Pablo Soto-Quiros (https://www.tec.ac.cr/juan-pablo-soto-quiros) - Email: jusoto@tec.ac.cr
 * Anatoli Torokhti (https://people.unisa.edu.au/anatoli.torokhti) - Email: anatoli.torokhti@unisa.edu.au
