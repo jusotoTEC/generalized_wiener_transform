@@ -1,4 +1,4 @@
-# MATLAB Code from Numerical Experiments in Paper *"Fast transforms of random vectors within Wiener filtering paradigm"*
+# MATLAB Code for Numerical Experiments in the Paper *"Fast transforms of random vectors within Wiener filtering paradigm"*
 
 ## Authors
 
